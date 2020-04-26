@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PBProject</title>
+    <style>
+        .footer {
+           position:fixed;
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           background-color:black;
+           color: white;
+           text-align: center;
+        }
+        </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans"> -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-sm bg-secondary justify-content-center">
+          <div class="navbar-header">
+            <a class="navbar-brand"  style="font-size:xx-large;text-align:center;font-style: italic;font-weight: bold;text-decoration-color:blue;color:palegreen;">Principles of Bigdata Management</a>
+         
+        </div>
+      </nav>
+    <div class="container">
+        <div class="se-pre-con"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-success">
+                        Query - 1
+                    </div>
+                    <div class="card-body text-success">
+                        <p class="card-text">Display day and retweet counts who used ‘apple’ in their description</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-success">
+                        <a type="button" class="btn btn-danger" href="{% url 'execute' id=1%}">Query1</a >
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-success">
+                    Query - 2
+                </div>
+                <div class="card-body text-success">
+                    <p class="card-text">Display username and his statuses counts who used ‘apple’ in their description</p>
+                </div>
+                <div class="card-footer bg-transparent border-success">
+                    <a type="button" class="btn btn-danger" href="{% url 'execute' id=2%}">Query2</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">
+                Query - 3
+            </div>
+            <div class="card-body text-success">
+                <p class="card-text">Display language and their counts where text like ‘apple’ is used.</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">
+                <a type="button" class="btn btn-danger" href="{% url 'execute' id=3%}">Query3</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row">  
+<div class="col-md-4">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">
+            Query - 4
+        </div>
+        <div class="card-body text-success">
+            <p class="card-text"> Display country and their tweets counts .</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <a type="button" class="btn btn-danger" href="{% url 'execute' id=4%}">Query4</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">
+            Query - 5
+        </div>
+        <div class="card-body text-success">
+            <p class="card-text">Display username and followers counts text like ‘iphone’ in retweets.</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <a type="button" class="btn btn-danger" href="{% url 'execute' id=5%}">Query5</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">
+            Query - 6
+        </div>
+        <div class="card-body text-success">
+            <p class="card-text">Display location and the user listed count where followers greater than 1000.</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <a type="button" class="btn btn-danger" href="{% url 'execute' id=6%}">Query6</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">
+            Query - 7
+        </div>
+        <div class="card-body text-success">
+            <p class="card-text">Display date and number of tweets count on that day.</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <a type="button" class="btn btn-danger" href="{% url 'execute' id=7%}">Query7</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">
+            Query - 8
+        </div>
+        <div class="card-body text-success">
+            <p class="card-text">Display keyword appeared in hashtag and their count of total appearance .</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <a type="button" class="btn btn-danger" href="{% url 'execute' id=8%}">Query8</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">
+            Query - 9
+        </div>
+        <div class="card-body text-success">
+            <p class="card-text">Display some keywords and their count of appearance in complete json data.</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <a type="button" class="btn btn-danger" href="{% url 'execute' id=9%}">Query9</a>
+</div>
+</div>
+</div>
+ </div>
+ <div class="row">
+ <div class="col-md-4">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">
+            Query - 10
+        </div>
+        <div class="card-body text-success">
+            <p class="card-text">Display month  and count of tweeter accounts created in that month.</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <a type="button" class="btn btn-danger" href="{% url 'execute' id=10%}">Query10</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">
+            Query - 11
+        </div>
+        <div class="card-body text-success">
+            <p class="card-text">Display Time in a day and count.</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <a type="button" class="btn btn-danger" href="{% url 'execute' id=11%}">Query11</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>Designed and Developed By Sandeep, Saichand, Pardhasaradhi</p>
+  </div>
+    <!-- <script src="{% static 'js/main.js' %}"></script> -->
+</body>
+
+</html>
